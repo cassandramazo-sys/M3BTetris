@@ -143,14 +143,11 @@ public class GameModel {
     public void dropPiece() {
         if (gameOver.get() || paused.get() || currentPiece == null) return;
 
-        int rowsDropped = 0;
         while (movePieceDown()) {
-            rowsDropped++;
+// Keep dropping until it can't move down
         }
 
-        if (rowsDropped > 0) {
-            addScore(rowsDropped * 2); // 2 points per row dropped
-        }
+        addScore(20); // Bonus for hard drop
     }
 
     private void lockPiece() {
