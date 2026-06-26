@@ -20,8 +20,7 @@ public class TetrisApp extends Application {
 
         // Setup the scene
         Scene scene = new Scene(view.getRoot(), 550, 700);
-        scene.getStylesheets().add(getClass().getClassLoader().getResource("styles.css").toExternalForm());
-
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         primaryStage.setTitle("LBYCPEI Tetris Game");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
